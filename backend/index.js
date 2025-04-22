@@ -18,7 +18,7 @@ import { connectDB } from "./db/connectDB.js";
 import { configurePassport } from "./passport/passport.config.js";
 
 dotenv.config();
-configurePassport()
+configurePassport();
 const app = express();
 
 const httpServer = http.createServer(app);
@@ -59,8 +59,8 @@ await server.start();
 // Set up our Express middleware to handle CORS, body parsing,
 // and our expressMiddleware function.
 app.use(
-  "/",
-  cors({ credentials: true }),
+  "/graphql",
+  cors({ origin: "http://localhost:3000", credentials: true }),
   express.json(),
   // expressMiddleware accepts the same arguments:
   // an Apollo Server instance and optional configuration options

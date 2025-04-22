@@ -22,9 +22,9 @@ const Card = ({ cardType }) => {
 				<div className='flex flex-row items-center justify-between'>
 					<h2 className='text-lg font-bold text-white'>Saving</h2>
 					<div className='flex items-center gap-2'>
-						<FaTrash className={"cursor-pointer"} />
+						<FaTrash className={"cursor-pointer text-white"} />
 						<Link to={`/transaction/123`}>
-							<HiPencilAlt className='cursor-pointer' size={20} />
+							<HiPencilAlt className='cursor-pointer text-white' size={20} />
 						</Link>
 					</div>
 				</div>
