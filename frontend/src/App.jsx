@@ -12,7 +12,6 @@ import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const { loading, error, data } = useQuery(GET_AUTHENTICATED_USER);
-  console.log(data?.authUser);
 
   return (
     <>

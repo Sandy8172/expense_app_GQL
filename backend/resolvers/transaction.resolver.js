@@ -14,11 +14,12 @@ const transactionesolver = {
         throw new Error("Error getting transactions");
       }
     },
-    transaction: async (_, { transactionId }) => {
+    transaction: async (_, { transactionId }, context) => {
       try {
         if (!context.getUser()) {
           throw new Error("Unauthrized");
         }
+
         const transaction = await Transaction.findById(transactionId);
         return transaction;
       } catch (error) {
@@ -34,6 +35,7 @@ const transactionesolver = {
           ...input,
           userId: context.getUser()._id,
         });
+
         await newTransaction.save();
         return newTransaction;
       } catch (error) {
