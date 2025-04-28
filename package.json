@@ -16,6 +16,7 @@
     "@graphql-tools/merge": "^9.0.24",
     "bcryptjs": "^3.0.2",
     "connect-mongodb-session": "^5.0.0",
+    "cron": "^4.3.0",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "express-session": "^1.18.1",
